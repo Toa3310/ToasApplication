@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import io.reactivex.rxjava3.functions.BiFunction;
 import jp.ac.meijou.android.s241205182.databinding.ActivityMain3Binding;
 
 public class MainActivity3 extends AppCompatActivity {
@@ -32,6 +33,15 @@ public class MainActivity3 extends AppCompatActivity {
         binding.button1.setOnClickListener(view -> pushOperand(1));
         binding.button2.setOnClickListener(view -> pushOperand(2));
         binding.button3.setOnClickListener(view -> pushOperand(3));
+        binding.button4.setOnClickListener(view -> pushOperand(4));
+        binding.button5.setOnClickListener(view -> pushOperand(5));
+        binding.button6.setOnClickListener(view -> pushOperand(6));
+        binding.button7.setOnClickListener(view -> pushOperand(7));
+        binding.button8.setOnClickListener(view -> pushOperand(8));
+        binding.button9.setOnClickListener(view -> pushOperand(9));
+
+        binding.buttonAC.setOnClickListener(view -> allClear());
+
     }
     private void pushOperand(int num) {
         if (operator == null) {
@@ -43,6 +53,16 @@ public class MainActivity3 extends AppCompatActivity {
         }
         binding.textResult.setText(String.valueOf(display));
     }
+
+    private void allClear(){
+        operand1 = 0;
+        operand2 = 0;
+        display = 0;
+        operator = null;
+        binding.textResult.setText(String.valueOf(display));
+    }
+
+
     private enum Operator {
         PLUS(Integer::sum),
         MINUS((a, b) -> a - b),
