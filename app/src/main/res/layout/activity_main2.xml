@@ -37,7 +37,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="1行目"
+        android:text="明示的Intent...MainActivityに移動"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button2"
@@ -47,7 +47,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2行目"
+        android:text="暗黙的Intent...直也のHPに移動"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@id/textView"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -57,30 +57,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="3行目"
-        app:layout_constraintBottom_toTopOf="@id/editTextText2"
+        android:text="送信...Text内に入力した内容をMainActivity4に表示"
+        app:layout_constraintBottom_toTopOf="@id/submitText"
         app:layout_constraintStart_toStartOf="@id/textView"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/submitText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@id/button4"
+        android:text="Text"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView3" />
+        app:layout_constraintEnd_toStartOf="@id/submitButton"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="送信"
-        app:layout_constraintStart_toEndOf="@id/editTextText2"
-        app:layout_constraintBottom_toBottomOf="@id/editTextText2"
+        app:layout_constraintStart_toEndOf="@id/submitText"
+        app:layout_constraintBottom_toBottomOf="@id/submitText"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/returnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:text="Result:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/submitText"
+        app:layout_constraintTop_toBottomOf="@id/submitText" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起動"
+        app:layout_constraintEnd_toEndOf="@id/submitButton"
+        app:layout_constraintTop_toBottomOf="@id/submitButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
