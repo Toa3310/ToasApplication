@@ -45,10 +45,11 @@ public class MainActivity6 extends AppCompatActivity {
 
         binding.getButton.setOnClickListener(view -> {
             var text = binding.inputText.getText().toString();
-            var color = binding.colorText.getText().toString();
+            var backColor = binding.backColor.getText().toString();
+            var characterColor = binding.characterColor.getText().toString();
 
             // textパラメータをつけたURLの作成
-            var url = Uri.parse("https://placehold.jp/" + color + "/ffffff" + "/500x500.png")
+            var url = Uri.parse("https://placehold.jp/" + backColor + "/" + characterColor + "/500x500.png")
                     .buildUpon()
                     .appendQueryParameter("text", text)
                     .build()

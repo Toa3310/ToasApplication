@@ -29,13 +29,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/colorText"
-        android:layout_width="262dp"
-        android:layout_height="40dp"
-        android:text="カラーを指定"
+        android:id="@+id/backColor"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:text="背景のカラーを指定"
         app:layout_constraintStart_toStartOf="@id/inputText"
         app:layout_constraintTop_toBottomOf="@id/inputText" />
 
+    <EditText
+        android:id="@+id/characterColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文字のカラーを指定"
+        app:layout_constraintTop_toBottomOf="@id/backColor"
+        app:layout_constraintStart_toStartOf="@id/backColor"
+        />
     <Button
         android:id="@+id/getButton"
         android:layout_width="wrap_content"

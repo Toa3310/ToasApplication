@@ -7,4 +7,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity7">
 
+    <TextView
+        android:id="@+id/labelTransport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="優先"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toStartOf="@id/transport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Wi-Fi"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelTransport"
+        app:layout_constraintTop_toTopOf="@id/labelTransport" />
+
+    <TextView
+        android:id="@+id/labelIPAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="IPアドレス"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTransport" />
+
+    <TextView
+        android:id="@+id/ipAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/labelIPAddress"
+        app:layout_constraintTop_toBottomOf="@id/labelIPAddress"
+        android:text="192.168.0.1"
+        android:textSize="28dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
