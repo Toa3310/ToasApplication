@@ -53,7 +53,7 @@ public class MainActivity8 extends AppCompatActivity {
                 @Override
                 public void onFailure(Call call, IOException e) {
                     e.printStackTrace();
-                    runOnUiThread(() -> binding.textViewResult.setText("通信エラーが発生しました"));
+                    runOnUiThread(() -> binding.textViewResult.setText(e.getMessage()));
                 }
 
                 @Override
